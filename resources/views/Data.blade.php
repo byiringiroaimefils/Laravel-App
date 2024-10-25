@@ -21,7 +21,7 @@
     <div class="container mx-auto mt-10">
         <div class="text-center">
             <h2 class="text-2xl font-bold">All user's Information</h2>
-            <p class="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, quo.</p>
+            <p class="text-md">Lorem  dolor sit amet consectetur adipisicing elit. Quam, quo.</p>
         </div><br><br>
         <table class="min-w-full ">
             <thead>
