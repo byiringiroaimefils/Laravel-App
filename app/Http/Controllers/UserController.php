@@ -61,4 +61,5 @@ class UserController extends Controller
         return redirect()->route('data')->with('success', ' successfully Deleted');
     
     }
+   
 }
