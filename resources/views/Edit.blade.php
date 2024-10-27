@@ -24,7 +24,7 @@
     <div class="Container">
         <div class="text-center">
             <h2 class="text-2xl font-bold">Update your information</h2>
-            <p class="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, quo.</p>
+            <p class="text-md">Lorem ipsum, dolor consectetur adipisicing elit. Quam, quo.</p>
         </div>
         <form action="{{ url('/userData/' . $user->id . '/edit') }}" method="POST"
             class="flex flex-col justify-center m-10">
