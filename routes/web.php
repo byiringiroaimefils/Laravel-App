@@ -4,7 +4,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\authController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/Home', function () {
     return view('Home');
 });
 
@@ -30,11 +30,11 @@ Route::get('/userData/{id}/delete',[UserController::class,'delete'])->name('dele
 
 // Authontication user create Account
 
-Route::get('/signIn',[authController::class,'signIn'])->name('auth.signIn');
+Route::get('/',[authController::class,'signIn'])->name('auth.signIn');
 Route::post('login', [authController::class, 'login']);
 Route::post('logout', [authController::class, 'logout'])->name('logout');
 
 
 
 Route::get('/signUp',[authController::class,'signUp'])->name('auth.signUp');
-Route::post('', [authController::class, 'register']);
+Route::post('/register', [authController::class, 'register']);

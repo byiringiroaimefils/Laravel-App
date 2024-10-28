@@ -14,7 +14,7 @@
 
     <nav>
         <ul class="flex justify-center gap-5 pt-5 font-extrabold">
-            <li> <a href="/" class="">Home</a> </li>
+            <li> <a href="/Home" class="">Home</a> </li>
             <li><a href="/userData" class=""> User</a></li>
             <li><a href="/About" class="">Docum</a> </li>
         </ul>

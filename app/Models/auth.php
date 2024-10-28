@@ -9,9 +9,9 @@ class auth extends Model
 {
     use HasFactory;
 
-    protected $table='users';
+    protected $table='auth';
     protected $fillable = [
-        'username',
+        'name',
         'email',
         'password',
     ];

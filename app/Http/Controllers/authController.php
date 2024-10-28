@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\auth as AuthModel;
-use App\Models\User;
+// use App\Models\User;
+
 
 class authController extends Controller
 {
@@ -19,7 +20,7 @@ class authController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (auth::attempt($credentials)) {
-            return redirect()->intended('dashboard');
+            return redirect()->intended('Home');
         }
 
         return redirect('login')->withErrors('Login details are not valid');
@@ -42,19 +43,19 @@ class authController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|confirmed|min:8',
+            'email' => 'required',
+            'password' => 'required',
         ]);
 
-        $user = User::create([
+        $user = AuthModel::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        AuthModel::login($user); // Updated to use the new alias
+        // AuthModel::login($user);
 
-        return redirect('dashboard');
+        return redirect('Home');
     }
 
 

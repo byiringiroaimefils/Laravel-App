@@ -7,8 +7,8 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-gray-100">
-    <div class="Container">
+<body class="bg-gray-100 ">
+    <div class="Container  mt-20 ">
         <div class="text-center">
             <h2 class="text-2xl font-bold">Create Acount</h2>
             <p class="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, quo.</p>
@@ -18,22 +18,22 @@
             @method('post')
 
             <label for="">User Name</label>
-            <input type="text" name="username" class="border p-2 rounded-md bg-transparent">
-            {{-- @error('emai')
+            <input type="text" name="name" class="border p-2 rounded-md bg-transparent w-50">
+            @error('name')
             <span style="color: red">{{ $message }}</span>
-            @enderror --}}
+            @enderror
             <br>
             <label for="">Email</label>
             <input type="email" name="email" class="border p-2 rounded-md bg-transparent">
-            {{-- @error('emai')
+            @error('email')
             <span style="color: red">{{ $message }}</span>
-            @enderror --}}
+            @enderror
             <br>
             <label for="">PassWord</label>
             <input type="password" name="password" class="border p-2 rounded-md bg-transparent">
-            {{-- @error('name')
+            @error('password')
                 <span style="color: red">{{ $message }}</span>
-            @enderror --}}
+            @enderror
             <br>
 
             <button type="button " class="bg-black text-white p-2 rounded-full"> Sign Up </button>
