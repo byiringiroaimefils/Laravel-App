@@ -31,8 +31,8 @@ Route::get('/userData/{id}/delete',[UserController::class,'delete'])->name('dele
 // Authontication user create Account
 
 Route::get('/',[authController::class,'signIn'])->name('auth.signIn');
-Route::post('login', [authController::class, 'login']);
-Route::post('logout', [authController::class, 'logout'])->name('logout');
+Route::post('login', [authController::class, 'login'])->name('login');
+Route::post('logout', [authController::class, 'logout']);
 
 
 

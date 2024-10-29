@@ -8,25 +8,25 @@
 </head>
 
 <body class="bg-gray-100 ">
-    <div class="Container  mt-20 ">
+    <div class="Container  p-28 pl-48 pr-48 ">
         <div class="text-center">
             <h2 class="text-2xl font-bold">Create Acount</h2>
             <p class="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, quo.</p>
         </div>
-        <form action="{{url('register') }}" method="post" class="flex flex-col justify-center m-10">
+        <form action="{{ url('register') }}" method="post" class="flex flex-col justify-center m-10">
             @csrf
             @method('post')
 
             <label for="">User Name</label>
             <input type="text" name="name" class="border p-2 rounded-md bg-transparent w-50">
             @error('name')
-            <span style="color: red">{{ $message }}</span>
+                <span style="color: red">{{ $message }}</span>
             @enderror
             <br>
             <label for="">Email</label>
             <input type="email" name="email" class="border p-2 rounded-md bg-transparent">
             @error('email')
-            <span style="color: red">{{ $message }}</span>
+                <span style="color: red">{{ $message }}</span>
             @enderror
             <br>
             <label for="">PassWord</label>
@@ -35,7 +35,7 @@
                 <span style="color: red">{{ $message }}</span>
             @enderror
             <br>
-
+            <p>Already have  account ? <a href="/" class="text-grey">Log in</a> </p><br>
             <button type="button " class="bg-black text-white p-2 rounded-full"> Sign Up </button>
         </form>
     </div>

@@ -8,29 +8,27 @@
 </head>
 
 <body class="bg-gray-100">
-    <div class="Container">
+    <div class="Container  p-36 pl-48 pr-48  ">
         <div class="text-center">
             <h2 class="text-2xl font-bold"> Sign In </h2>
             <p class="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, quo.</p>
         </div>
         <form action="{{ url('login') }}" method="post" class="flex flex-col justify-center m-10">
             @csrf
-            @method('post')
-
             <label for="">Email</label>
             <input type="text" name="email" class="border p-2 rounded-md bg-transparent">
-            {{-- @error('emai')
+            @error('email')
             <span style="color: red">{{ $message }}</span>
-            @enderror --}}
+            @enderror
             <br>
-            <label for="">PassWord</label>
+            <label for="">Password</label>
             <input type="password" name="password" class="border p-2 rounded-md bg-transparent">
-            {{-- @error('name')
+            @error('password')
                 <span style="color: red">{{ $message }}</span>
-            @enderror --}}
+            @enderror
             <br>
-
-            <button type="button " class="bg-black text-white p-2 rounded-full"> Sign Up </button>
+            <p>create account ? <a href="/signUp" class="text-grey">Sign up</a> </p><br>
+            <button type="submit" class="bg-black text-white p-2 rounded-full"> Sign Login </button>
         </form>
     </div>
 </body>

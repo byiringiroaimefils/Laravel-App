@@ -17,6 +17,8 @@
             <li> <a href="/Home" class="">Home</a> </li>
             <li><a href="/userData" class=""> User</a></li>
             <li><a href="/About" class="">Docum</a> </li>
+            <li><a href="/logout" class="">Logout</a> </li>
+
         </ul>
     </nav><br> <br>
 
