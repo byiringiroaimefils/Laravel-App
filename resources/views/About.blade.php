@@ -13,7 +13,7 @@
         <ul class="flex justify-center gap-5 pt-5 font-extrabold">
             <li><a href="/" class="">Home</a></li>
             <li><a href="/userData" class="">User</a></li>
-            <li><a href="/About" class="">Docum</a></li>
+            <li><a href="/About" class="">Docum.</a></li>
         </ul>
     </nav>
 
@@ -59,7 +59,6 @@
             <ol class="list-decimal list-inside">
                 <li>Locate the record you want to delete</li>
                 <li>Click the "Delete" button</li>
-                {{-- <li>Confirm the deletion when prompted</li> --}}
             </ol>
             <p class="mt-2 text-red-600">Warning: Deletion is permanent and cannot be undone.</p>
         </section>
