@@ -1,3 +1,5 @@
+
+@if(Auth::check())
 <!doctype html>
 <html>
 
@@ -57,3 +59,9 @@
 </body>
 
 </html>
+
+@else
+      gg
+@endif
+
+

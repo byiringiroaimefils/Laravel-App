@@ -17,13 +17,11 @@ class authController extends Controller
 
     public function login(Request $request)
     {
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->email and $request->password;
 
         if (auth::attempt($credentials)) {
-            return redirect()->intended('Home');
+            return redirect('Home');
         }
-
-        return redirect('login')->withErrors('Login details are not valid');
     }
 
     public function logout()
