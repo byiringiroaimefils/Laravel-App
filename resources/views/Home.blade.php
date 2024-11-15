@@ -1,5 +1,4 @@
 
-@if(Auth::check())
 <!doctype html>
 <html>
 
@@ -60,8 +59,6 @@
 
 </html>
 
-@else
-      gg
-@endif
+
 
 
