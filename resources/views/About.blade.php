@@ -58,7 +58,7 @@
             <p class="mb-2">To delete a record:</p>
             <ol class="list-decimal list-inside">
                 <li>Locate the record you want to delete</li>
-                <li>Click the "Delete" button</li>
+                <li>Click the Delete button</li>
             </ol>
             <p class="mt-2 text-red-600">Warning: Deletion is permanent and cannot be undone.</p>
         </section>
