@@ -1,11 +1,15 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\StoryController;
+// use App\Http\Controllers\StoryController;
 use App\Http\Controllers\authController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/Home', function () {
     return view('Home');
+});
+Route::get('/Upload', function () {
+    return view('Upload');
 });
 
 Route::get('/About', function () {
@@ -19,12 +23,12 @@ Route::get('/Data', function () {
 
 // For User  interface 
 
-Route::get('/userData',[UserController::class,'index'])->name('data');
-Route::post('/userData',[UserController::class,'store'])->name('store');
-Route::get('/userData/create',[UserController::class,'create'])->name('Home');
-Route::get('/userData/{id}/edit',[UserController::class,'edit'])->name('edit');
-Route::put('/userData/{id}/update',[UserController::class,'update'])->name('update');
-Route::get('/userData/{id}/delete',[UserController::class,'delete'])->name('delete');
+Route::get('/userData',[StoryController::class,'index'])->name('data');
+Route::post('/userData',[StoryController::class,'store'])->name('store');
+Route::get('/userData/create',[StoryController::class,'create'])->name('Home');
+Route::get('/userData/{id}/edit',[StoryController::class,'edit'])->name('edit');
+Route::put('/userData/{id}/update',[StoryController::class,'update'])->name('update');
+Route::get('/userData/{id}/delete',[StoryController::class,'delete'])->name('delete');
 
 
 
