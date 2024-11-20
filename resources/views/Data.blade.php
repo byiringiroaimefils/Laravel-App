@@ -12,10 +12,10 @@
 <body class="bg-gray-100">
     <nav>
         <ul class="flex justify-center gap-5 pt-5 font-extrabold">
-            <li> <a href="/Home" class="">Home</a> </li>
-            <li><a href="/userData" class=""> User</a></li>
-            <li><a href="/About" class="">Docum</a> </li>   
-            <li><a href="/logout" class="">Logout</a> </li>
+            <li> <a href="/Home" >Home</a> </li>
+            <li><a href="/userData"> User</a></li>
+            <li><a href="/About">Docum</a> </li>   
+            <li><a href="/logout">Logout</a> </li>
         </ul>
     </nav>
 
@@ -27,11 +27,10 @@
         <table class="min-w-full ">
             <thead>
                 <tr>
-                    <th class="py-2 ">No</th>
-                    <th class="py-2">User Name</th>
-                    <th class="py-2">Email</th>
-                    <th class="py-2">Level</th>
-                    <th class="py-2">Student Code</th>
+                    <th class="py-2 ">ID</th>
+                    <th class="py-2">Title</th>
+                    <th class="py-2">Author</th>
+                    <th class="py-2">Story</th>
                     <th class="py-2">Action</th>
                 </tr>
             </thead>
@@ -39,10 +38,9 @@
                 @foreach ($users as $user)
                     <tr>
                         <td class="border px-4 py-2">{{ $user->id }}</td>
-                        <td class="border px-4 py-2">{{ $user->name }}</td>
-                        <td class="border px-4 py-2">{{ $user->email }}</td>
-                        <td class="border px-4 py-2">{{ $user->level }}</td>
-                        <td class="border px-4 py-2">{{ $user->studentCode }}</td>
+                        <td class="border px-4 py-2">{{ $user->Tstory }}</td>
+                        <td class="border px-4 py-2">{{ $user->author }}</td>
+                        <td class="border px-4 py-2">{{ $user->story }}</td>
                         <td class="border px-4 py-3">
                             <a class="text-blue-500 " href="{{ url('/userData/' . $user->id . '/edit') }}">Edit</a>
                             <a class="text-red-500" href="{{ url('/userData/' . $user->id . '/delete') }}">Delete</a>

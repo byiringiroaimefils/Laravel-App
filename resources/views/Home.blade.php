@@ -19,41 +19,7 @@
     </nav> <br><br>
 
     <div class="Container">
-        <div class="text-center">
-            <h2 class="text-2xl font-bold">Fill out your information</h2>
-            <p class="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, quo.</p>
-        </div>
-        <form action="{{url('userData') }}" method="post" class="flex flex-col justify-center m-10">
-            @csrf
-            @method('post')
-
-            <label for="">User Name</label>
-            <input type="text" name="name" class="border p-2 rounded-md bg-transparent">
-            @error('name')
-                <span style="color: red">{{ $message }}</span>
-            @enderror
-            <br>
-            <label for="">Email</label>
-            <input type="text" name="email" class="border p-2 rounded-md bg-transparent">
-            @error('emai')
-                <span style="color: red">{{ $message }}</span>
-            @enderror
-            <br>
-            <label for="">Level</label>
-            <input type="number" name="level" class="border p-2 rounded-md bg-transparent">
-            @error('level')
-                <span style="color: red">{{ $message }}</span>
-            @enderror
-            <br>
-            <label for="">Student Code</label>
-            <input type="number" name="studentCode" class="border p-2 rounded-md bg-transparent">
-            @error('studentCode')
-                <span style="color: red">{{ $message }}</span>
-            @enderror
-            <br>
-
-            <button type="button " class="bg-black text-white p-2 rounded-full">Submit</button>
-        </form>
+       
     </div>
 </body>
 
