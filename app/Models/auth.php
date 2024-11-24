@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class auth extends Model
 {
     use HasFactory;
-
     protected $table='auth';
+
     protected $fillable = [
         'name',
         'email',

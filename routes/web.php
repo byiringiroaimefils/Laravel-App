@@ -25,6 +25,9 @@ Route::get('/Data', function () {
 
 Route::get('/userData',[StoryController::class,'index'])->name('data');
 Route::post('/userData',[StoryController::class,'store'])->name('store');
+
+
+
 Route::get('/userData/create',[StoryController::class,'create'])->name('Home');
 Route::get('/userData/{id}/edit',[StoryController::class,'edit'])->name('edit');
 Route::put('/userData/{id}/update',[StoryController::class,'update'])->name('update');
