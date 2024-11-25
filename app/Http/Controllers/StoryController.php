@@ -23,10 +23,10 @@ class StoryController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'level' => 'required|integer',
-            'studentCode' => 'required|integer'
+            'Tstory' => 'required',
+            'author' => 'required',
+            'story' => 'required',
+            
         ]);
 
         $newUser = Story::create($data);
@@ -44,10 +44,9 @@ class StoryController extends Controller
     public function update(Request $request, int $id)
     {
         $data = $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'level' => 'required|integer',
-            'studentCode' => 'required|integer'
+          'Tstory' => 'required',
+            'author' => 'required',
+            'story' => 'required',
         ]);
         Story::findOrFail($id)->update($data);
         return redirect()->route('data')->with('success', 'User created successfully');
