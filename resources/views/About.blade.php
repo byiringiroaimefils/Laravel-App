@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Documentation</title>
-    @vite('resources/css/app.css')
-</head>
-
-<body class="bg-gray-100">
-    <nav>
-        <ul class="flex justify-center gap-5 pt-5 font-extrabold">
-            <li><a href="/" class="">Home</a></li>
-            <li><a href="/userData" class="">User</a></li>
-            <li><a href="/About" class="">Docum.</a></li>
-        </ul>
-    </nav>
-
-    <main class="container mx-auto mt-10 px-4">
+<x-layout class="bg-gray-100">
+     <main class="container mx-auto mt-10 px-4">
         <div class="text-center">
             <h2 class="text-2xl font-bold">CRUD Operation Documentation</h2>
             <p class="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, quo.</p>
@@ -63,6 +45,6 @@
             <p class="mt-2 text-red-600">Warning: Deletion is permanent and cannot be undone.</p>
         </section>
     </main>
-</body>
+</x-layout>
 
-</html>
+

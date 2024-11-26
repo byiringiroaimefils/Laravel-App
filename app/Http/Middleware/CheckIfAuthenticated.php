@@ -13,7 +13,7 @@ class CheckIfAuthenticated
     public function handle($request, Closure $next)
     {
         if (!Auth::check()) {
-            return redirect('auth.signIn');
+            return redirect()->route('auth.signIn');
         }
 
         return $next($request);

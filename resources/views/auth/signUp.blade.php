@@ -13,9 +13,8 @@
             <h2 class="text-2xl font-bold">Create Acount</h2>
             <p class="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, quo.</p>
         </div>
-        <form action="{{ url('register') }}" method="post" class="flex flex-col justify-center m-10">
+        <form action="{{ url('register') }}" method="POST" class="flex flex-col justify-center m-10">
             @csrf
-            @method('post')
 
             <label for="">User Name</label>
             <input type="text" name="name" class="border p-2 rounded-md bg-transparent w-50">
@@ -36,7 +35,7 @@
             @enderror
             <br>
             <p>Already have  account ? <a href="/" class="text-grey">Log in</a> </p><br>
-            <button type="button " class="bg-black text-white p-2 rounded-full"> Sign Up </button>
+            <button type="submit" class="bg-black text-white p-2 rounded-full">Sign Up</button>
         </form>
     </div>
 </body>
