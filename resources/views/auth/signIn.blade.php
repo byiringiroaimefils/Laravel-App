@@ -13,7 +13,7 @@
             <h2 class="text-2xl font-bold"> Sign In </h2>
             <p class="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, quo.</p>
         </div>
-        <form action="{{ route('login') }}" method="get" class="flex flex-col justify-center m-10">
+        <form action="{{ route('login') }}" method="POST" class="flex flex-col justify-center m-10">
             @csrf
             <label for="">Email</label>
             <input type="text" name="email" class="border p-2 rounded-md bg-transparent">
