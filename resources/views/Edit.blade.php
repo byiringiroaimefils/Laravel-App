@@ -9,7 +9,7 @@
             @csrf
             @method('PUT')
 
-            <label for="">Title of Story</label>
+            <label for="">Title of   Story</label>
             <input type="text" name="Tstory" value="{{ $user->Tstory }}" class="border p-2 rounded-md bg-transparent">
             @error('Tstory')
                 <span style="color: red">{{ $message }}</span>
