@@ -11,6 +11,13 @@ class Products extends Model
         'productName'
     ];
 
+    public function stock_ins(){
+        return $this->hasMany(StockIn::class);
+    }
+    public function stock_outs(){
+        return $this->hasMany(StockOut::class);
+    }
+
 }
 
 

@@ -14,18 +14,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-// For product
+// Forr 
 Route::get('/products', [ProductController::class, 'index'])->name('products')->middleware(['auth']);
 Route::post('/insertProduct', [ProductController::class, 'store'])->name('insertProduct')->middleware(['auth']);
-Route::get('/products/{id}/delete', [ProductController::class, 'delete'])->name('delete')->middleware(['auth']);
-// Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('edit');
-
-
-// For stoct-in
-
-
-
-// For stock-out
+Route::get('/products/{id}/delete', [ProductController::class, 'delete'])->name('delete');
 
 
 Route::get('/stock-in', [StockController::class, 'stockIn'])->name('stock-in')->middleware(['auth']);
