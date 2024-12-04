@@ -33,7 +33,8 @@ Route::get('/stock-out', [StockController::class, 'stockOut'])->name('stock-out'
 Route::get('/reports', [ReportController::class, 'index'])->name('reports')->middleware(['auth']);
 Route::post('/product-in', [StockController::class, 'stockIn'])->name('productIn.store');
 
-
+Route::post('/products/{id}/stock-in', [ProductController::class, 'stockIn'])->name('products.stockIn');
+Route::post('/products/{id}/stock-out', [ProductController::class, 'stockOut'])->name('products.stockOut');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

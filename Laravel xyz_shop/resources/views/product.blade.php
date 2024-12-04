@@ -42,6 +42,7 @@
                                     <td>
                                         <button class="bg-indigo-600 hover:bg-indigo-500 p-0.5 w-16 rounded-full text-base" type="button">Edit</button>
                                         <a href="{{ url('/products/' . $product->id . '/delete') }}"> <button class="bg-red-600 hover:bg-red-500 p-0.5 w-16 rounded-full text-base" >Delete</button> </a> 
+                                        <button class=" p-0.5 w-16 rounded-full text-base" type="button">stock in</button>
                                     </td>
                                 </tr>
                             @endforeach

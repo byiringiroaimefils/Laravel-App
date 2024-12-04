@@ -6,18 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Products extends Model
 {
-    
     protected $fillable = [
         'productName'
     ];
 
-    public function stock_ins(){
+    public function stockIns()
+    {
         return $this->hasMany(StockIn::class);
     }
-    public function stock_outs(){
+
+    public function stockOuts()
+    {
         return $this->hasMany(StockOut::class);
     }
-
 }
 
 
