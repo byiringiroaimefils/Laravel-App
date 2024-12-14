@@ -12,6 +12,9 @@ class CreateStockOutsTable extends Migration
             $table->id();  // Creates auto-incrementing 'id'
             $table->foreignId('product_id')->constrained('products')->onDelete('cascade');  // Foreign key to 'products' table
             $table->integer('quantity');
+            $table->decimal('price', 10, 2)->nullable();
+            $table->date('date');
+            $table->text('notes')->nullable();
             $table->timestamps();
         });
     }
