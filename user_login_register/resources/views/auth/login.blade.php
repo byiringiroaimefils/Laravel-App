@@ -11,7 +11,7 @@
         @csrf
         <div>
             <label>Email:</label>
-            <input type="email" name="email" value="{{ old('email') }}" required>
+            <input type="email" name="email" required>
         </div>
 
         <div>

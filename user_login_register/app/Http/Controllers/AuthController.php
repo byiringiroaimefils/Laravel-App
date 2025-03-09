@@ -32,7 +32,7 @@ class AuthController extends Controller
 
         Auth::login($user); // Auto-login after registration
 
-        return redirect()->route('dashboard')->with('success', 'Registration successful');
+        return redirect()->route('')->with('success', 'Registration successful');
     }
 
     // Show Login Form
