@@ -1,1 +1,1 @@
-### Laravel Learning Platform App
+## Laravel Learning Platform App
