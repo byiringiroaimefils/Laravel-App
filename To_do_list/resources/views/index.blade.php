@@ -24,16 +24,16 @@
             <th>Task Name</th>
             <th>Action</th>
         </tr>
-        @foreach ($todo_task as $task)
+        @foreach ($todo_task as $key => $task)
             <tr>
-                <td>{{ $task->id }}</td>
+                <td>{{ $key + 1 }}</td>
                 <td>{{ $task->task_name }}</td>
                 <td>
                     <button><a href="{{ route('todo.edit', $task->id) }}">update</a></button>
                     <form action="{{ route('todo.delete', $task->id) }}" method="POST" style="display:inline">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" onclick="return confirm('Are you sure?')" >delete</button>
+                        <button type="submit" onclick="return confirm('Are you sure?')">delete</button>
                     </form>
                 </td>
             </tr>
